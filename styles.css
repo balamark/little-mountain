@@ -300,6 +300,7 @@ section {
 .profile-image {
     position: sticky;
     top: 100px;
+    position: relative;
 }
 
 .profile-image img {
@@ -314,6 +315,25 @@ section {
 .profile-image img:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
+}
+
+.profile-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--gradient-primary);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    font-weight: 600;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover .profile-overlay {
+    transform: translateY(0);
 }
 
 .about-text p {
@@ -350,11 +370,59 @@ section {
 }
 
 /* Services Section */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.services-container {
     margin-top: 60px;
+}
+
+.featured-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.featured-card {
+    padding: 40px;
+    min-height: 320px;
+}
+
+.service-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.other-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.small-card {
+    padding: 20px;
+    min-height: 150px;
+}
+
+.small-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.small-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.small-card .service-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.small-card .service-icon i {
+    font-size: 1.5rem;
 }
 
 .service-card {
@@ -365,6 +433,8 @@ section {
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
+    cursor: pointer;
+    position: relative;
 }
 
 .service-card:hover {
@@ -397,6 +467,93 @@ section {
 .service-card p {
     color: var(--text-secondary);
     line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .learn-more {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: var(--shadow-xl);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.close {
+    color: var(--text-light);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: var(--text-primary);
+}
+
+.modal-body {
+    padding: 30px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.modal-footer {
+    padding: 20px 30px 30px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
 }
 
 /* Pricing Section */
@@ -553,10 +710,22 @@ section {
 
 .testimonial-author {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 15px;
     padding-top: 20px;
     border-top: 1px solid var(--border-color);
+}
+
+.author-avatar {
+    flex-shrink: 0;
+}
+
+.author-avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
 }
 
 .author-info h4 {
@@ -789,8 +958,14 @@ section {
         grid-template-columns: 1fr;
     }
     
-    .services-grid {
+    .featured-services {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .other-services {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
     }
     
     .pricing-grid {
@@ -811,9 +986,14 @@ section {
     }
     
     .testimonial-author {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         gap: 15px;
+    }
+    
+    .author-avatar img {
+        width: 50px;
+        height: 50px;
     }
     
     .contact-content {
