@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Mountain Studio - Professional Software Engineering Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2 data-en="Little Mountain Studio" data-zh="阿山工作室">Little Mountain Studio</h2>
+                <span class="tagline" data-en="Software Engineer" data-zh="軟體工程師">Software Engineer</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link" data-en="About" data-zh="關於我">About</a>
+                <a href="#services" class="nav-link" data-en="Services" data-zh="服務">Services</a>
+                <a href="#pricing" class="nav-link" data-en="Pricing" data-zh="收費">Pricing</a>
+                <a href="#testimonials" class="nav-link" data-en="Testimonials" data-zh="推薦">Testimonials</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-zh="聯絡">Contact</a>
+                <button class="language-toggle" onclick="toggleLanguage()">
+                    <span class="lang-text">中文</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-en="Professional Software Engineering Services" data-zh="專業軟體工程服務">
+                    Professional Software Engineering Services
+                </h1>
+                <p class="hero-subtitle" data-en="Transforming your ideas into powerful digital solutions with cutting-edge technology and personalized service." data-zh="運用尖端技術和個人化服務，將您的想法轉化為強大的數位解決方案。">
+                    Transforming your ideas into powerful digital solutions with cutting-edge technology and personalized service.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary" data-en="Get Started" data-zh="開始合作">Get Started</a>
+                    <a href="#services" class="btn btn-secondary" data-en="View Services" data-zh="查看服務">View Services</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-animation">
+                    <div class="code-line"></div>
+                    <div class="code-line"></div>
+                    <div class="code-line"></div>
+                    <div class="code-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-en="About Mark" data-zh="關於 Mark">About Mark</h2>
+            <div class="about-content">
+                <div class="about-profile">
+                    <div class="profile-image">
+                        <img src="https://via.placeholder.com/300x300/2563eb/ffffff?text=Mark" alt="Mark - Software Engineer" />
+                    </div>
+                    <div class="about-text">
+                        <p data-en="With a strong foundation from Carnegie Mellon University and professional experience at leading tech companies like Microsoft, I specialize in creating innovative software solutions that drive business success." data-zh="擁有卡內基美隆大學的堅實基礎和在微軟等領先科技公司的專業經驗，我專精於創造推動業務成功的創新軟體解決方案。">
+                            With a strong foundation from Carnegie Mellon University and professional experience at leading tech companies like Microsoft, I specialize in creating innovative software solutions that drive business success.
+                        </p>
+                        <p data-en="During my time at Microsoft, I worked on large-scale distributed systems and gained deep expertise in enterprise-grade software development. My passion extends beyond coding to education, having taught through the TEALS Program and volunteering at the Pacific Science Center." data-zh="在微軟工作期間，我參與大規模分散式系統開發，並在企業級軟體開發方面獲得深度專業知識。我的熱情不僅限於編程，還延伸到教育領域，曾透過 TEALS 計畫教學並在太平洋科學中心擔任志工。">
+                            During my time at Microsoft, I worked on large-scale distributed systems and gained deep expertise in enterprise-grade software development. My passion extends beyond coding to education, having taught through the TEALS Program and volunteering at the Pacific Science Center.
+                        </p>
+                        <p data-en="I believe in making technology accessible and empowering others through knowledge sharing, combining my industry experience with a genuine passion for teaching and mentoring." data-zh="我相信讓技術變得易於使用，並透過知識分享賦能他人，結合我的行業經驗與對教學和指導的真誠熱忱。">
+                            I believe in making technology accessible and empowering others through knowledge sharing, combining my industry experience with a genuine passion for teaching and mentoring.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-skills">
+                    <h3 data-en="Technical Expertise" data-zh="技術專長">Technical Expertise</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Web Development</div>
+                        <div class="skill-item">Database Design</div>
+                        <div class="skill-item">Data Analysis</div>
+                        <div class="skill-item">AI/ML Solutions</div>
+                        <div class="skill-item">System Architecture</div>
+                        <div class="skill-item">Tech Education</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-en="Services" data-zh="服務項目">Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 data-en="Web Development" data-zh="網站開發">Web Development</h3>
+                    <p data-en="Modern, responsive websites and web applications tailored to your business needs." data-zh="為您的業務需求量身打造的現代化響應式網站和網路應用程式。">
+                        Modern, responsive websites and web applications tailored to your business needs.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 data-en="Database Solutions" data-zh="資料庫解決方案">Database Solutions</h3>
+                    <p data-en="Secure, scalable database design and optimization for efficient data management." data-zh="安全、可擴展的資料庫設計和優化，實現高效的資料管理。">
+                        Secure, scalable database design and optimization for efficient data management.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-en="Data Analysis" data-zh="資料分析">Data Analysis</h3>
+                    <p data-en="Transform your data into actionable insights with custom reports and visualizations." data-zh="透過客製化報表和視覺化，將您的資料轉化為可行的洞察。">
+                        Transform your data into actionable insights with custom reports and visualizations.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 data-en="AI Solutions" data-zh="AI 解決方案">AI Solutions</h3>
+                    <p data-en="Implement AI and machine learning solutions to automate and enhance your business processes." data-zh="實施 AI 和機器學習解決方案，自動化並提升您的業務流程。">
+                        Implement AI and machine learning solutions to automate and enhance your business processes.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 data-en="Tech Education" data-zh="科技教育">Tech Education</h3>
+                    <p data-en="Coding workshops, AI bootcamps, and tech training for students and professionals." data-zh="為學生和專業人士提供編程工作坊、AI 訓練營和科技培訓。">
+                        Coding workshops, AI bootcamps, and tech training for students and professionals.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 data-en="Tech Consulting" data-zh="科技顧問">Tech Consulting</h3>
+                    <p data-en="Strategic technology consulting to help your organization make informed decisions." data-zh="策略性科技顧問服務，協助您的組織做出明智決策。">
+                        Strategic technology consulting to help your organization make informed decisions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title" data-en="Pricing Plans" data-zh="收費方案">Pricing Plans</h2>
+            <p class="pricing-subtitle" data-en="Flexible subscription-based services tailored to your needs" data-zh="靈活的訂閱制服務，為您的需求量身訂製">
+                Flexible subscription-based services tailored to your needs
+            </p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 data-en="Starter" data-zh="入門方案">Starter</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">999</span>
+                        <span class="period" data-en="/month" data-zh="/月">/month</span>
+                    </div>
+                    <ul class="features">
+                        <li data-en="Small website or web app" data-zh="小型網站或網路應用程式">Small website or web app</li>
+                        <li data-en="Basic database setup" data-zh="基礎資料庫設置">Basic database setup</li>
+                        <li data-en="Monthly maintenance" data-zh="每月維護">Monthly maintenance</li>
+                        <li data-en="Email support" data-zh="電子郵件支援">Email support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" data-en="Get Started" data-zh="開始使用">Get Started</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="popular-badge" data-en="Most Popular" data-zh="最受歡迎">Most Popular</div>
+                    <h3 data-en="Professional" data-zh="專業方案">Professional</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">2499</span>
+                        <span class="period" data-en="/month" data-zh="/月">/month</span>
+                    </div>
+                    <ul class="features">
+                        <li data-en="Medium website or application" data-zh="中型網站或應用程式">Medium website or application</li>
+                        <li data-en="Advanced database solutions" data-zh="進階資料庫解決方案">Advanced database solutions</li>
+                        <li data-en="Data analysis & reporting" data-zh="資料分析與報表">Data analysis & reporting</li>
+                        <li data-en="Priority support" data-zh="優先支援">Priority support</li>
+                        <li data-en="Monthly consultations" data-zh="每月諮詢">Monthly consultations</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" data-en="Get Started" data-zh="開始使用">Get Started</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3 data-en="Enterprise" data-zh="企業方案">Enterprise</h3>
+                    <div class="price">
+                        <span class="amount" data-en="Custom" data-zh="客製">Custom</span>
+                    </div>
+                    <ul class="features">
+                        <li data-en="Large-scale applications" data-zh="大型應用程式">Large-scale applications</li>
+                        <li data-en="AI/ML integration" data-zh="AI/ML 整合">AI/ML integration</li>
+                        <li data-en="Team training & workshops" data-zh="團隊培訓與工作坊">Team training & workshops</li>
+                        <li data-en="24/7 support" data-zh="24/7 支援">24/7 support</li>
+                        <li data-en="Dedicated consultation" data-zh="專屬諮詢">Dedicated consultation</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" data-en="Contact Us" data-zh="聯絡我們">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-en="Client Testimonials" data-zh="客戶推薦">Client Testimonials</h2>
+            <p class="testimonials-subtitle" data-en="What our clients say about working with Little Mountain Studio" data-zh="客戶對阿山工作室的評價">What our clients say about working with Little Mountain Studio</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p data-en="Mark delivered an exceptional web application that transformed our business operations. His expertise in database design and Microsoft technologies was exactly what we needed. The project was completed on time and exceeded our expectations." data-zh="Mark 為我們開發了一個出色的網路應用程式，徹底改變了我們的業務運營。他在資料庫設計和微軟技術方面的專業知識正是我們所需要的。專案按時完成並超出了我們的期望。">
+                            Mark delivered an exceptional web application that transformed our business operations. His expertise in database design and Microsoft technologies was exactly what we needed. The project was completed on time and exceeded our expectations.
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4 data-en="Sarah Chen" data-zh="陳莎拉">Sarah Chen</h4>
+                            <span data-en="CEO, TechStart Inc." data-zh="TechStart Inc. 執行長">CEO, TechStart Inc.</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p data-en="The AI training program Mark designed for our students was incredible. His teaching background really shows - he made complex concepts accessible and engaging. Our students are now confidently building their own AI projects." data-zh="Mark 為我們學生設計的 AI 培訓課程非常棒。他的教學背景真的很顯著 - 他讓複雜的概念變得易懂且有趣。我們的學生現在能夠自信地建立自己的 AI 專案。">
+                            The AI training program Mark designed for our students was incredible. His teaching background really shows - he made complex concepts accessible and engaging. Our students are now confidently building their own AI projects.
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4 data-en="Dr. James Liu" data-zh="劉詹姆斯博士">Dr. James Liu</h4>
+                            <span data-en="Principal, Innovation High School" data-zh="創新高中校長">Principal, Innovation High School</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p data-en="Working with Little Mountain Studio was the best decision we made for our nonprofit. Mark understood our budget constraints and delivered a beautiful, functional website that perfectly represents our mission. The subscription model makes it affordable for us to maintain." data-zh="與阿山工作室合作是我們非營利組織做出的最佳決定。Mark 理解我們的預算限制，為我們打造了一個美麗、功能完整的網站，完美地展現了我們的使命。訂閱制模式讓我們能夠負擔得起維護費用。">
+                            Working with Little Mountain Studio was the best decision we made for our nonprofit. Mark understood our budget constraints and delivered a beautiful, functional website that perfectly represents our mission. The subscription model makes it affordable for us to maintain.
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4 data-en="Maria Rodriguez" data-zh="瑪麗亞·羅德里格斯">Maria Rodriguez</h4>
+                            <span data-en="Director, Community Care Foundation" data-zh="社區關懷基金會主任">Director, Community Care Foundation</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-en="Get In Touch" data-zh="聯絡我們">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-en="Let's Start Your Project" data-zh="讓我們開始您的專案">Let's Start Your Project</h3>
+                    <p data-en="Ready to transform your ideas into reality? Contact me today for a free consultation." data-zh="準備將您的想法轉化為現實嗎？今天就聯絡我進行免費諮詢。">
+                        Ready to transform your ideas into reality? Contact me today for a free consultation.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>mark@techsolutions.com</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </div>
+                    </div>
+                    
+                    <div class="line-qr">
+                        <h4 data-en="Connect via LINE" data-zh="透過 LINE 聯絡">Connect via LINE</h4>
+                        <div class="qr-code">
+                            <img src="https://via.placeholder.com/150x150/4285f4/ffffff?text=LINE+QR" alt="LINE QR Code" />
+                            <p data-en="Scan to add me on LINE" data-zh="掃描加入 LINE">Scan to add me on LINE</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name" data-en="Your Name" data-zh="您的姓名">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email" data-en="Email Address" data-zh="電子郵件">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="" data-en="Select a service" data-zh="選擇服務">Select a service</option>
+                                <option value="web" data-en="Web Development" data-zh="網站開發">Web Development</option>
+                                <option value="database" data-en="Database Solutions" data-zh="資料庫解決方案">Database Solutions</option>
+                                <option value="analysis" data-en="Data Analysis" data-zh="資料分析">Data Analysis</option>
+                                <option value="ai" data-en="AI Solutions" data-zh="AI 解決方案">AI Solutions</option>
+                                <option value="education" data-en="Tech Education" data-zh="科技教育">Tech Education</option>
+                                <option value="consulting" data-en="Tech Consulting" data-zh="科技顾问">Tech Consulting</option>
+                            </select>
+                            <label for="service" data-en="Service Needed" data-zh="需要的服務">Service Needed</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message" data-en="Project Details" data-zh="專案詳情">Project Details</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-en="Send Message" data-zh="發送訊息">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 data-en="Little Mountain Studio" data-zh="阿山工作室">Little Mountain Studio</h3>
+                    <p data-en="Professional Software Engineering Services | Mark" data-zh="專業軟體工程服務 | Mark">Professional Software Engineering Services | Mark</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about" data-en="About" data-zh="關於">About</a>
+                    <a href="#services" data-en="Services" data-zh="服務">Services</a>
+                    <a href="#pricing" data-en="Pricing" data-zh="收費">Pricing</a>
+                    <a href="#testimonials" data-en="Testimonials" data-zh="推薦">Testimonials</a>
+                    <a href="#contact" data-en="Contact" data-zh="聯絡">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-en="&copy; 2024 Little Mountain Studio - Professional Software Engineering Services. All rights reserved." data-zh="&copy; 2024 阿山工作室 - 專業軟體工程服務。版權所有。">&copy; 2024 Little Mountain Studio - Professional Software Engineering Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
