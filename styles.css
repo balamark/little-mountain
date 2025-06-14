@@ -655,6 +655,13 @@ section {
     background: var(--bg-primary);
 }
 
+.testimonials .section-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #2c3e50;
+}
+
 .testimonials-subtitle {
     text-align: center;
     font-size: 1.2rem;
@@ -788,6 +795,16 @@ section {
     font-size: 1.2rem;
 }
 
+.contact-method a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-method a:hover {
+    color: var(--primary-color);
+}
+
 .line-qr {
     text-align: center;
 }
@@ -851,8 +868,6 @@ section {
 
 .form-group input:focus + label,
 .form-group input:valid + label,
-.form-group select:focus + label,
-.form-group select:valid + label,
 .form-group textarea:focus + label,
 .form-group textarea:valid + label {
     top: -10px;
@@ -861,6 +876,38 @@ section {
     color: var(--primary-color);
     background: white;
     padding: 0 5px;
+}
+
+.form-group select:focus + label,
+.form-group select:valid + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    background: white;
+    padding: 0 5px;
+}
+
+.form-group select {
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 45px;
+}
+
+.form-group select + label {
+    z-index: 0;
+    pointer-events: none;
+}
+
+.form-group select option {
+    background: white;
+    color: var(--text-primary);
+    padding: 10px;
 }
 
 .form-group textarea {
@@ -1049,6 +1096,30 @@ section {
     
     section {
         padding: 60px 0;
+    }
+    
+    .featured-services {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .other-services {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .featured-card {
+        padding: 30px 20px;
+        min-height: 280px;
+    }
+    
+    .small-card {
+        padding: 15px;
+        min-height: 120px;
+    }
+    
+    .service-highlights {
+        font-size: 0.8rem;
     }
 }
 

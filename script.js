@@ -711,6 +711,7 @@ const serviceContent = {
                 </ul>
                 
                 <p><strong>🚀 Ready to inspire young minds?</strong> Small classes ensure personalized attention!</p>
+                <a href="ai-workshop.html">Elephant AI Workshop</a>
             `,
             zh: `
                 <h3>🌟 學校編程工作坊</h3>
@@ -753,6 +754,7 @@ const serviceContent = {
                 </ul>
                 
                 <p><strong>🚀 準備啟發年輕心靈？</strong> 小班制確保個人化關注！</p>
+                <a href="ai-workshop.html">大象 AI 創意工作坊</a>
             `
         }
     },
