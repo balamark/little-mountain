@@ -465,7 +465,7 @@ const serviceContent = {
                 
                 <h4>Check out our work:</h4>
                 <p>See a live example at <a href="https://moreway-cafe.de.r.appspot.com/" target="_blank">Moreway Cafe</a> - a beautiful coffee shop website with LINE integration!</p>
-                
+                <p>A useful gift drawing app at<a href="https://studio--studio-s1ksa.us-central1.hosted.app/" target="_blank"> - a quick utility tool for drawing gifts among friends</a>
                 <h4>Perfect for:</h4>
                 <ul>
                     <li>Cafés and restaurants</li>
@@ -489,7 +489,7 @@ const serviceContent = {
                 
                 <h4>🌟 作品範例：</h4>
                 <p>請看 <a href="https://moreway-cafe.de.r.appspot.com/" target="_blank">摩威咖啡</a> 的實際案例 - 美觀的咖啡店網站，整合LINE官方帳號的訂單系統</p>
-                
+                <p>一個實用的抽禮物應用程式在<a href="https://studio--studio-s1ksa.us-central1.hosted.app/" target="_blank"> - 一個快速實用的工具，讓朋友們可以一起參與抽獎活動</a></p>
                 <h4>適合對象：</h4>
                 <ul>
                     <li>咖啡廳和餐廳</li>
