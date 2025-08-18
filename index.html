@@ -16,6 +16,9 @@
                 <h2 data-en="Little Mountain Studio" data-zh="阿山工作室">Little Mountain Studio</h2>
                                     <span class="tagline" data-en="Tech Education & Web Design" data-zh="科技教育與網站設計">科技教育與網站設計</span>
             </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="nav-menu">
                 <a href="#about" class="nav-link" data-en="About" data-zh="關於我">About</a>
                 <a href="#services" class="nav-link" data-en="Services" data-zh="服務">Services</a>
@@ -45,11 +48,117 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="code-animation">
-                    <div class="code-line"></div>
-                    <div class="code-line"></div>
-                    <div class="code-line"></div>
-                    <div class="code-line"></div>
+                <div class="dashboard-container">
+                    <div class="dashboard-header">
+                        <h4 data-en="Business Analytics" data-zh="業務分析">Business Analytics</h4>
+                        <div class="dashboard-status">
+                            <span class="status-dot active"></span>
+                            <span data-en="Live Data" data-zh="即時數據">Live Data</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-counter="150">0</div>
+                                <div class="stat-label" data-en="Happy Clients" data-zh="滿意客戶">Happy Clients</div>
+                                <div class="stat-trend positive">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>+12%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-counter="50">0</div>
+                                <div class="stat-label" data-en="Projects Done" data-zh="完成專案">Projects Done</div>
+                                <div class="stat-trend positive">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>+8%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-counter="300">0</div>
+                                <div class="stat-label" data-en="Students Trained" data-zh="培訓學生">Students Trained</div>
+                                <div class="stat-trend positive">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>+25%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">4.9</div>
+                                <div class="stat-label" data-en="Rating" data-zh="評分">Rating</div>
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-chart">
+                        <div class="chart-header">
+                            <span data-en="Monthly Growth" data-zh="月度增長">Monthly Growth</span>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color primary"></div>
+                                    <span data-en="Projects" data-zh="專案">Projects</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color secondary"></div>
+                                    <span data-en="Students" data-zh="學生">Students</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-bars">
+                            <div class="chart-bar">
+                                <div class="bar-fill primary" style="height: 60%"></div>
+                                <span class="bar-label">Jan</span>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-fill secondary" style="height: 75%"></div>
+                                <span class="bar-label">Feb</span>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-fill primary" style="height: 85%"></div>
+                                <span class="bar-label">Mar</span>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-fill secondary" style="height: 70%"></div>
+                                <span class="bar-label">Apr</span>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-fill primary" style="height: 90%"></div>
+                                <span class="bar-label">May</span>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-fill secondary" style="height: 95%"></div>
+                                <span class="bar-label">Jun</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,10 +171,8 @@
             <div class="about-content">
                 <div class="about-profile">
                     <div class="profile-image">
-                        <img src="profile-image.jpeg" alt="Mark - Software Engineer" onerror="this.src='https://via.placeholder.com/300x300/2563eb/ffffff?text=Mark'" />
-                        <div class="profile-overlay">
-                            <span data-en="Mark" data-zh="Mark">Mark</span>
-                        </div>
+                        <img src="mark.JPG" alt="Mark - Software Engineer" onerror="this.src='https://via.placeholder.com/300x300/2563eb/ffffff?text=Mark'" />
+
                     </div>
                     <div class="about-text">
                         <p data-en="With a strong foundation from Carnegie Mellon University and professional experience at leading tech companies like Microsoft, Mark specializes in creating innovative software solutions that drive business success." data-zh="擁有卡內基美隆大學的堅實基礎和在微軟等領先科技公司的專業經驗，Mark 專精於創造推動業務成功的創新軟體解決方案。">
@@ -370,6 +477,27 @@
                         <div class="contact-method">
                             <i class="fab fa-linkedin"></i>
                             <a href="https://www.linkedin.com/in/your-profile" target="_blank" data-en="LinkedIn Profile" data-zh="LinkedIn 檔案">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <h4 data-en="Follow Us" data-zh="追蹤我們">Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/mountain_studio_shan/" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/your-page" target="_blank" class="social-icon facebook" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/your-handle" target="_blank" class="social-icon twitter" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@your-channel" target="_blank" class="social-icon youtube" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://github.com/your-username" target="_blank" class="social-icon github" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
                     

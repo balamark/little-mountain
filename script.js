@@ -125,6 +125,9 @@ document.addEventListener('DOMContentLoaded', function() {
         element.classList.add('loading');
     });
     
+    // Initialize dashboard animations
+    initDashboardAnimations();
+    
     // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
@@ -272,13 +275,64 @@ function showNotification(message, type = 'info') {
     }, 5000);
 }
 
+// Counter Animation for Dashboard Stats
+function animateCounters() {
+    const counters = document.querySelectorAll('[data-counter]');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-counter'));
+        const duration = 2000; // 2 seconds
+        const step = target / (duration / 16); // 60fps
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+            } else {
+                counter.textContent = Math.floor(current);
+            }
+        }, 16);
+    });
+}
+
+// Dashboard intersection observer
+function initDashboardAnimations() {
+    const dashboard = document.querySelector('.dashboard-container');
+    if (!dashboard) return;
+    
+    const dashboardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Animate counters when dashboard comes into view
+                setTimeout(animateCounters, 500);
+                
+                // Animate chart bars
+                const bars = document.querySelectorAll('.bar-fill');
+                bars.forEach((bar, index) => {
+                    setTimeout(() => {
+                        bar.style.animation = 'barGrow 1s ease-out forwards';
+                    }, 800 + (index * 100));
+                });
+                
+                dashboardObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.3
+    });
+    
+    dashboardObserver.observe(dashboard);
+}
+
 // Parallax effect for hero section
 window.addEventListener('scroll', function() {
     const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.code-animation');
+    const dashboardElements = document.querySelectorAll('.dashboard-container');
     
-    parallaxElements.forEach(element => {
-        const speed = 0.5;
+    dashboardElements.forEach(element => {
+        const speed = 0.3;
         element.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });
@@ -289,10 +343,20 @@ const businessNames = {
     zh: "阿山工作室"
 };
 
-// Mobile menu toggle (if needed for mobile responsiveness)
+// Mobile menu toggle
 function toggleMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
+    const toggleButton = document.querySelector('.mobile-menu-toggle');
+    const icon = toggleButton.querySelector('i');
+    
     navMenu.classList.toggle('mobile-active');
+    
+    // Change icon
+    if (navMenu.classList.contains('mobile-active')) {
+        icon.className = 'fas fa-times';
+    } else {
+        icon.className = 'fas fa-bars';
+    }
 }
 
 // Add click outside to close mobile menu
@@ -300,9 +364,27 @@ document.addEventListener('click', function(e) {
     const navMenu = document.querySelector('.nav-menu');
     const navbar = document.querySelector('.navbar');
     
-    if (!navbar.contains(e.target)) {
+    if (!navbar.contains(e.target) && navMenu.classList.contains('mobile-active')) {
         navMenu.classList.remove('mobile-active');
+        const icon = document.querySelector('.mobile-menu-toggle i');
+        icon.className = 'fas fa-bars';
     }
+});
+
+// Close mobile menu when clicking nav links
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            const icon = document.querySelector('.mobile-menu-toggle i');
+            
+            if (navMenu.classList.contains('mobile-active')) {
+                navMenu.classList.remove('mobile-active');
+                icon.className = 'fas fa-bars';
+            }
+        });
+    });
 });
 
 // Loading screen (optional)
