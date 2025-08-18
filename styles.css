@@ -1002,6 +1002,7 @@ section {
 
 .line-qr {
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 50px;
 }
 
@@ -1038,6 +1039,7 @@ section {
 /* Social Media Icons */
 .social-media {
     margin-top: 40px;
+    margin-bottom: 60px;
     text-align: center;
 }
 
@@ -1383,6 +1385,18 @@ section {
         position: static;
         max-width: 250px;
         margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .profile-image img {
+        width: 100%;
+        max-width: 250px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
     }
     
     .skills-grid {
@@ -1445,7 +1459,12 @@ section {
         font-size: 1.2rem;
     }
     
+    .social-media {
+        margin-bottom: 50px;
+    }
+    
     .line-qr {
+        margin-top: 15px;
         margin-bottom: 40px;
     }
     
@@ -1590,7 +1609,12 @@ section {
         font-size: 0.65rem;
     }
     
+    .social-media {
+        margin-bottom: 45px;
+    }
+    
     .line-qr {
+        margin-top: 10px;
         margin-bottom: 35px;
     }
     
@@ -1601,6 +1625,21 @@ section {
     
     .qr-code p {
         font-size: 0.8rem;
+    }
+    
+    .profile-image {
+        max-width: 200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .profile-image img {
+        width: 100%;
+        max-width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin: 0 auto;
     }
 }
 
