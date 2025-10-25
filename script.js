@@ -540,9 +540,14 @@ const serviceContent = {
                 
                 <h4>🎯 What makes it special:</h4>
                 <ul>
-                    <li>Mobile-friendly design that looks great everywhere</li>
+                    <li>High-performance build meeting Google Core Web Vitals</li>
+                    <li>Full SEO control – meta, schema, sitemap, and page structure optimized for ranking</li>
+                    <li>Schema markup for LocalBusiness, Product, and Blog</li>
+                    <li>Responsive design (desktop, tablet, mobile)</li>
+                    <li>Hosting, maintenance, and storage included</li>
+                    <li>3 monthly edits or feature requests (covered by the monthly plan)</li>
                     <li>Integration with your LINE official account</li>
-                    <li>Fast and engaging user experience</li>
+                    <li>Optional full CMS backend for editing text, photos, and videos directly — similar to Webflow's editor, but with more freedom and no plugin restrictions</li>
                 </ul>
                 
                 <h4>Check out our work:</h4>
@@ -564,9 +569,14 @@ const serviceContent = {
                 
                 <h4>🎯 特色功能：</h4>
                 <ul>
-                    <li>手機友善設計，在任何裝置都美觀</li>
+                    <li>高效能建置，符合 Google Core Web Vitals 標準</li>
+                    <li>完整 SEO 控制 – meta、schema、sitemap 和頁面結構優化以提升排名</li>
+                    <li>本地商家、產品和部落格的 Schema 標記</li>
+                    <li>響應式設計（桌面、平板、手機）</li>
+                    <li>包含主機、維護和儲存空間</li>
+                    <li>每月 3 次編輯或功能請求（涵蓋於月費方案中）</li>
                     <li>整合您的 LINE 官方帳號</li>
-                    <li>快速且吸引人的用戶體驗</li>
+                    <li>選配完整的 CMS 後台，可直接編輯文字、照片和影片 — 類似 Webflow 編輯器，但擁有更多自由度且無外掛限制</li>
                 </ul>
                 
                 <h4>🌟 作品範例：</h4>
